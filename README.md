@@ -6,6 +6,7 @@ Dante Device Plugin for Q-SYS.
 	- [Table of contents](#table-of-contents)
 	- [Install](#install)
 	- [Fohhn-Dante-Device-Plugin.qplug](#fohhn-dante-device-pluginqplug)
+	- [License](#license)
 
 
 ## Install 
@@ -35,3 +36,6 @@ DI-2.2000 DAN, DI-2.4000 DAN, DI-4.1000 DAN, DI-4.2000 DAN
 DI-2.2000 DUC, DI-2.4000 DUC, DI-4.1000 DUC, DI-4.2000 DUC
 
 FS-70, FS-110, FS-150, FS-200
+
+## License
+Fohhn-Net-Device-Plugin.qplug licensed under the [MIT License](https://opensource.org/licenses/MIT), see [LICENSE](LICENSE) for more information.
