@@ -1,7 +1,7 @@
 -- Fohhn Q-SYS Plugin
 -- by Fohhn Audio AG
 -- February 2023
--- licensed under the MIT License, see LICENSE.TXT for more information
+-- licensed under the MIT License, see LICENSE for more information
 -- Read README.md before use
 
 PluginInfo = {
