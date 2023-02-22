@@ -38,4 +38,4 @@ DI-2.2000 DUC, DI-2.4000 DUC, DI-4.1000 DUC, DI-4.2000 DUC
 FS-70, FS-110, FS-150, FS-200
 
 ## License
-Fohhn-Net-Device-Plugin.qplug licensed under the [MIT License](https://opensource.org/licenses/MIT), see [LICENSE](LICENSE) for more information.
+Fohhn-Dante-Device-Plugin.qplug licensed under the [MIT License](https://opensource.org/licenses/MIT), see [LICENSE](LICENSE) for more information.
