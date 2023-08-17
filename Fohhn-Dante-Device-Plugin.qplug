@@ -1,12 +1,12 @@
 -- Fohhn Q-SYS Plugin
 -- by Fohhn Audio AG
--- July 2023
+-- August 2023
 -- licensed under the MIT License, see LICENSE for more information
 -- Read README.md before use
 
 PluginInfo = {
   Name = "Fohhn~Fohhn Dante Device Plugin",
-  Version = "0.6",
+  Version = "0.7",
   Id = "3569c07f-76ff-467d-9e7e-9603ebb9ee24",
   Author = "Fohhn",
   Description = "Plugin for Fohhn devices with Dante interface"
@@ -28,10 +28,12 @@ FOHHN_DEVICES = {
   [13] = "MA-4.100",
   [14] = "MA-4.600",
   [15] = "MA-2.1200",
+  [16] = "X-16",
 }
 
 NumOutputChannels = 1
 ErrorFlags = {}
+ErrorFlagsFault = { "Fault" }
 ErrorFlagsFocus = { "Fault", "AudioFault", "PilotToneFault" }
 ErrorFlags2ChAmp = { "Protect1", "Protect2" }
 ErrorFlags4ChAmp = { "Protect1", "Protect2", "Protect3", "Protect4" }
@@ -98,6 +100,9 @@ function Config(props)
   elseif selectedModel == FOHHN_DEVICES[15] then
     NumOutputChannels = 2 
     ErrorFlags = ErrorFlags2ChAmp
+  elseif selectedModel == FOHHN_DEVICES[16] then
+    NumOutputChannels = 16
+    ErrorFlags = ErrorFlagsFault
   end
 end
 
@@ -320,7 +325,7 @@ function GetControlLayout(props)
     Style = "Button",
     ButtonStyle = "Toggle",
     Color = {255, 0, 0},
-    Position = {240, 290},
+    Position = {320, 5},
     Size = {60, 24}
   }
 
