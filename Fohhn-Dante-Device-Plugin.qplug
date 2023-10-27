@@ -1,12 +1,12 @@
 -- Fohhn Q-SYS Plugin
 -- by Fohhn Audio AG
--- August 2023
+-- October 2023
 -- licensed under the MIT License, see LICENSE for more information
 -- Read README.md before use
 
 PluginInfo = {
   Name = "Fohhn~Fohhn Dante Device Plugin",
-  Version = "0.7",
+  Version = "0.8",
   Id = "3569c07f-76ff-467d-9e7e-9603ebb9ee24",
   Author = "Fohhn",
   Description = "Plugin for Fohhn devices with Dante interface"
