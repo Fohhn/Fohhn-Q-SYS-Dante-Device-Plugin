@@ -1,6 +1,6 @@
 -- Fohhn Q-SYS Plugin
 -- by Fohhn Audio AG
--- October 2023
+-- February 2024
 -- licensed under the MIT License, see LICENSE for more information
 -- Read README.md before use
 
@@ -31,6 +31,9 @@ FOHHN_DEVICES = {
   [16] = "X-16",
   [17] = "Scale-1 PoE",
   [18] = "SL-20 PoE",
+  [19] = "AS-206",
+  [20] = "AS-112",
+  [21] = "AS-115",
 }
 
 NumOutputChannels = 1
@@ -109,6 +112,15 @@ function Config(props)
     NumOutputChannels = 1
     ErrorFlags = ErrorFlagsFault
   elseif selectedModel == FOHHN_DEVICES[18] then
+    NumOutputChannels = 1
+    ErrorFlags = ErrorFlagsFault
+  elseif selectedModel == FOHHN_DEVICES[19] then
+    NumOutputChannels = 1
+    ErrorFlags = ErrorFlagsFault
+  elseif selectedModel == FOHHN_DEVICES[20] then
+    NumOutputChannels = 1
+    ErrorFlags = ErrorFlagsFault
+  elseif selectedModel == FOHHN_DEVICES[21] then
     NumOutputChannels = 1
     ErrorFlags = ErrorFlagsFault
   end
