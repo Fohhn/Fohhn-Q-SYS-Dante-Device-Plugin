@@ -14,7 +14,7 @@ Dante Device Plugin for Q-SYS.
 2. Drag a Fohhn plugin from plugins to your project
 3. Configure IP address and Fohhn-Net ID in the properties
 
-Tested with Q-SYS Designer 9.3.1
+Tested with Q-SYS Designer 9.4.7 LTS
 
 ## Fohhn-Dante-Device-Plugin.qplug
 **Functions:**
