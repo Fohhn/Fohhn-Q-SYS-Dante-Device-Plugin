@@ -41,6 +41,8 @@ X-16
 
 Scale-1 PoE, SL-20 PoE
 
+MA-4.100, MA-4.600, MA-2.1200
+
 AS-206, AS-112, AS-115
 
 ## License
