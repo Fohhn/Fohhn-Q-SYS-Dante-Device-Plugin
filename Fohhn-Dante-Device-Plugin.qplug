@@ -1,12 +1,12 @@
 -- Fohhn Q-SYS Plugin
 -- by Fohhn Audio AG
--- June 2024
+-- June 2025
 -- licensed under the MIT License, see LICENSE for more information
 -- Read README.md before use
 
 PluginInfo = {
   Name = "Fohhn~Fohhn Dante Device Plugin",
-  Version = "0.10",
+  Version = "0.11",
   Id = "3569c07f-76ff-467d-9e7e-9603ebb9ee24",
   Author = "Fohhn",
   Description = "Plugin for Fohhn devices with Dante interface"
@@ -28,7 +28,6 @@ FOHHN_DEVICES = {
   [13] = "MA-4.100",
   [14] = "MA-4.600",
   [15] = "MA-2.1200",
-  [16] = "X-16",
   [17] = "Scale-1 PoE",
   [18] = "SL-20 PoE",
   [19] = "AS-206",
@@ -105,9 +104,6 @@ function Config(props)
   elseif selectedModel == FOHHN_DEVICES[15] then
     NumOutputChannels = 2 
     ErrorFlags = ErrorFlags2ChAmp
-  elseif selectedModel == FOHHN_DEVICES[16] then
-    NumOutputChannels = 16
-    ErrorFlags = ErrorFlagsFault
   elseif selectedModel == FOHHN_DEVICES[17] then
     NumOutputChannels = 1
     ErrorFlags = ErrorFlagsFault
