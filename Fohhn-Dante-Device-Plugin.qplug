@@ -1,12 +1,12 @@
 -- Fohhn Q-SYS Plugin
 -- by Fohhn Audio AG
--- June 2025
+-- July 2025
 -- licensed under the MIT License, see LICENSE for more information
 -- Read README.md before use
 
 PluginInfo = {
   Name = "Fohhn~Fohhn Dante Device Plugin",
-  Version = "0.11",
+  Version = "0.12",
   Id = "3569c07f-76ff-467d-9e7e-9603ebb9ee24",
   Author = "Fohhn",
   Description = "Plugin for Fohhn devices with Dante interface"
@@ -482,6 +482,7 @@ if Controls then
   busy = false
   delayed = false  
   online = false
+  offlineMessage = false
   currentData = nil
 
   pollTimer.EventHandler = function()
@@ -504,9 +505,12 @@ if Controls then
     online = false
     retryOnlineStatus = retryOnlineStatus - 1
     if (retryOnlineStatus < 0) then
-      retryOnlineStatus = 2	
-      debug_error("Device is offline")
-      Log.Error("device is offline")
+      retryOnlineStatus = 2
+      if offlineMessage == false then
+        offlineMessage = true
+        debug_error("device (" .. DeviceName .. ", ID " .. Id .. ") is offline")
+        Log.Error("device (" .. DeviceName .. ", ID " .. Id .. ") is offline")
+      end
       Controls.Online.Value = false
     end
 
@@ -828,8 +832,10 @@ if Controls then
     if online == false then
       debug_info("device (" .. DeviceName .. ", ID " .. Id .. ") is online")
       Log.Message("device (" .. DeviceName .. ", ID " .. Id .. ") is online")
+      offlineMessage = false
     end
 
+    retryOnlineStatus = 2
     online = true
     Controls.Online.Value = true    
 
