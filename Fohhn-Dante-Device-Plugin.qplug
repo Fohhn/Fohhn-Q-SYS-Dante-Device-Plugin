@@ -1,12 +1,12 @@
 -- Fohhn Q-SYS Plugin
 -- by Fohhn Audio AG
--- July 2025
+-- September 2025
 -- licensed under the MIT License, see LICENSE for more information
 -- Read README.md before use
 
 PluginInfo = {
   Name = "Fohhn~Fohhn Dante Device Plugin",
-  Version = "0.12",
+  Version = "1.0",
   Id = "3569c07f-76ff-467d-9e7e-9603ebb9ee24",
   Author = "Fohhn",
   Description = "Plugin for Fohhn devices with Dante interface"
@@ -874,3 +874,4 @@ if Controls then
   sendCommand()
   pollTimer:Start(1)
 end
+
