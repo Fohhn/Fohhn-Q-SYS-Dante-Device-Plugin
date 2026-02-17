@@ -1,12 +1,12 @@
 -- Fohhn Q-SYS Plugin
 -- by Fohhn Audio AG
--- December 2025
+-- February 2026
 -- licensed under the MIT License, see LICENSE for more information
 -- Read README.md before use
 
 PluginInfo = {
   Name = "Fohhn~Fohhn Dante Device Plugin",
-  Version = "1.1",
+  Version = "1.2",
   Id = "3569c07f-76ff-467d-9e7e-9603ebb9ee24",
   Author = "Fohhn",
   Description = "Plugin for Fohhn devices with Dante interface"
@@ -86,16 +86,16 @@ function Config(props)
     ErrorFlags = ErrorFlags4ChAmp
   elseif selectedModel == FOHHN_DEVICES[9] then
     NumOutputChannels = 1 
-    ErrorFlags = ErrorFlagsFocus
+    ErrorFlags = ErrorFlagsFault
   elseif selectedModel == FOHHN_DEVICES[10] then
     NumOutputChannels = 1 
-    ErrorFlags = ErrorFlagsFocus
+    ErrorFlags = ErrorFlagsFault
   elseif selectedModel == FOHHN_DEVICES[11] then
     NumOutputChannels = 1 
-    ErrorFlags = ErrorFlagsFocus
+    ErrorFlags = ErrorFlagsFault
   elseif selectedModel == FOHHN_DEVICES[12] then
     NumOutputChannels = 1 
-    ErrorFlags = ErrorFlagsFocus
+    ErrorFlags = ErrorFlagsFault
   elseif selectedModel == FOHHN_DEVICES[13] then
     NumOutputChannels = 4 
     ErrorFlags = ErrorFlags4ChAmp
@@ -878,5 +878,6 @@ if Controls then
   sendCommand()
   pollTimer:Start(1)
 end
+
 
 
