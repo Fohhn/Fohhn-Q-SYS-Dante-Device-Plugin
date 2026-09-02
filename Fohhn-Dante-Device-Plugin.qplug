@@ -1,12 +1,12 @@
 -- Fohhn Q-SYS Plugin
 -- by Fohhn Audio AG
--- February 2026
+-- September 2026
 -- licensed under the MIT License, see LICENSE for more information
 -- Read README.md before use
 
 PluginInfo = {
   Name = "Fohhn~Fohhn Dante Device Plugin",
-  Version = "1.2",
+  Version = "1.3",
   Id = "3569c07f-76ff-467d-9e7e-9603ebb9ee24",
   Author = "Fohhn",
   Description = "Plugin for Fohhn devices with Dante interface"
@@ -34,6 +34,12 @@ FOHHN_DEVICES = {
   [20] = "AS-112",
   [21] = "AS-115",
   [22] = "MA-4.200",
+  [23] = "AS-118",
+  [24] = "Scale-2 PoE++",
+  [25] = "IG-104 PoE",
+  [26] = "IG-104 free PoE",
+  [27] = "FS-70 PoE++",
+  [28] = "IGS-4 PoE++",
 }
 
 NumOutputChannels = 1
@@ -123,6 +129,24 @@ function Config(props)
   elseif selectedModel == FOHHN_DEVICES[22] then
     NumOutputChannels = 4
     ErrorFlags = ErrorFlags4ChAmp
+  elseif selectedModel == FOHHN_DEVICES[23] then
+    NumOutputChannels = 1
+    ErrorFlags = ErrorFlagsFault
+  elseif selectedModel == FOHHN_DEVICES[24] then
+    NumOutputChannels = 1
+    ErrorFlags = ErrorFlagsFault
+  elseif selectedModel == FOHHN_DEVICES[25] then
+    NumOutputChannels = 1
+    ErrorFlags = ErrorFlagsFault
+  elseif selectedModel == FOHHN_DEVICES[26] then
+    NumOutputChannels = 1
+    ErrorFlags = ErrorFlagsFault
+  elseif selectedModel == FOHHN_DEVICES[27] then
+    NumOutputChannels = 1
+    ErrorFlags = ErrorFlagsFault
+  elseif selectedModel == FOHHN_DEVICES[28] then
+    NumOutputChannels = 1
+    ErrorFlags = ErrorFlagsFault
   end
 end
 
